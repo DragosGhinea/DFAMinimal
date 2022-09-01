@@ -24,6 +24,7 @@ class AutomatDeterminist:
         self.tranzitii.pop(stare)
         if self.stareInitiala == stare:
             self.stareInitiala = None
+        self.stariFinale.remove(stare)
         for tranzitiiLocale in self.tranzitii.values():
             for litera, stareD in tranzitiiLocale.items():
                 if stareD == stare:
